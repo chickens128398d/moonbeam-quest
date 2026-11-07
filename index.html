@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#d4c5ec">
+<title>Moonbeam Quest</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="game-wrap" aria-label="Moonbeam Quest game">
+<div class="game-toolbar">
+<div class="health"><span class="heart">♥</span><span class="health-track"><span id="health-fill"></span></span><b id="health-text">100 <small>/ 100</small></b></div>
+<span id="room-label">MOONBEAM QUEST</span>
+<div class="game-options"><button id="sound" aria-label="Turn sound on" aria-pressed="false">♪ <span>SOUND OFF</span></button><button id="help" aria-label="How to play">?</button><button id="pause" aria-label="Pause game" disabled>Ⅱ <span>PAUSE</span></button></div>
+</div>
+<div class="canvas-wrap">
+<canvas id="game" width="960" height="600" aria-label="Scrolling unicorn dungeon with a corner minimap. Use WASD or arrow keys to move, Space to shoot, and Space to fly in the party room."></canvas>
+<div class="play-controls"><span class="keyboard-hint">WASD / ARROWS · MOVE &nbsp; SPACE · SHOOT &nbsp; P · PAUSE</span><div class="touch-controls"><div id="joystick" role="group" aria-label="Movement joystick"><span id="joystick-knob">✦</span></div><button id="shoot" aria-label="Shoot magic"><span>✦</span>SHOOT</button></div></div>
+<div id="start-screen" class="game-overlay"><div class="start-copy"><span class="pixel-label">A LITTLE UNICORN ADVENTURE</span><h1>MOONBEAM<br>QUEST ✦</h1><p>Explore a bigger, magical world.<br>Beat the storms. Unlock your forever pie party.</p><button id="start" class="primary">START ▶</button><span class="start-note">7 BIG ROOMS · ONE GLITTER-FILLED FINALE</span></div></div>
+<div id="message-screen" class="game-overlay hidden"><div class="message-card"><span id="message-kicker" class="pixel-label">TAKE A BREATHER</span><h2 id="message-title">PAUSED</h2><p id="message-copy">Your pie can wait a little.</p><button id="resume" class="primary">RESUME ▶</button><button id="restart" class="text-button">Start a new adventure</button></div></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<dialog id="help-dialog"><button id="close-help" class="close-button" aria-label="Close instructions">×</button><h2>A unicorn’s field guide</h2><p>Move with <b>WASD / arrow keys</b> or the touch joystick. Hold <b>Space / SHOOT</b> to fire at nearby storms. Use <b>Pause</b> or <b>P / Escape</b> to take a break.</p><p>Explore a new, scrolling maze in each room. The corner map reveals places you have explored. Pink dots are storms; gold marks your unlocked exit. Clear the storms, then follow the rainbow door on the right. Each level adds one more storm, starting with six. Room 7 is one open box with the thunder boss.</p><p>Every new room restores <b>100 health</b>. Storms deal 3 damage; the boss deals 10. Moonbeam unlocks in room 3 and Sunshine in room 5. Beat the boss and collect the pie to enter the party room! Tap <b>Space</b> or the mobile <b>JUMP / FLY</b> button to jump. Hold to fly and poop glitter. Let go to land and eat endless pie. Pause to start a new adventure.</p><button id="help-ok" class="primary">GOT IT ✦</button></dialog>
+</div>
+<div class="game-bottom"><div><span id="weapon-symbol">🌈</span><b id="weapon-label">Rainbow <span>· 3 DMG</span></b></div><div class="level-dots" aria-label="Seven levels"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="pie-goal">☾ EARN YOUR PIE PARTY</span></div>
+</main>
+<script src="audio.js"></script>
+<script src="game.js"></script>
+</body></html>
